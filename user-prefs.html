@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cbf8bca443.js" crossorigin="anonymous"></script>
+    <title>Prefernces</title>
+</head>
+<body onload="renderUserPref()">
+    <nav>   
+        <li><i class="fas fa-map-marker-alt"></i></li>
+        <li><a blank="_target" href="index.html">Home</a></li>
+        <li><a blank="_target" href="map.html">Map</a></li>
+    </nav>
+    <header>Preferences and user details</header>
+    <div class="form-container">
+    <form class="flex" id="prefernces-form">
+        <div class="holes-container flex">
+            <div class="paper-hole"></div>
+            <div class="paper-hole"></div>
+        </div>
+        <div class="input-container">
+            <div class="flex">
+                <label for="email">Enter your e-mail address: </label>
+                <input type="email" name="email" id="email" form="prefernces-form" required>
+            </div>
+            <div class="flex">
+                <div class="flex age">
+                    <label for="range">Enter your age: </label>
+                    <span id="sAge">69</span>
+                </div>
+                    <input onchange="showAge(this.value)" type="range" name="age" id="age" min="18" max="120" form="prefernces-form">
+                </div>
+            <div class="flex">
+                <label for="color">Choose your favourite colour, it will be the background color of the home page: </label>
+                <input onchange="onChosenColor(this)" type="color" name="background-color" id="color" form="prefernces-form">
+            </div>
+            <div class="flex">
+                <label for="color">Choose another colour, this will be the text colour for the home page: </label>
+                <input onchange="onChosenColor(this)" type="color" name="text-color" id="color" form="prefernces-form">
+            </div>
+            <div class="flex">
+                    <label for="dob">Enter the date and hour you were born in, and we will give you a forture cookie! </label>
+                    <input onblur="openModal()" type="datetime-local" name="hob" id="hob" form="prefernces-form">
+            </div>
+            <div class="flex">
+                <button onclick="onSubmitForm(event)" type="submit" value="submit" form="prefernces-form">Submit</button>
+            </div>
+        </div>
+    </div>
+    </form>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="https://ohmycodeness.files.wordpress.com/2016/03/fortune-cookie-hi.png" alt="fortuneCookie"/>
+            <div class="fortune-content"></div>
+        </div>
+      
+      </div>    
+    
+    <script src="js/userPrefService.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/util.js"></script>
+</body>
+</html>

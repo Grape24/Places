@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cbf8bca443.js" crossorigin="anonymous"></script>
+    <title>Map</title>
+</head>
+<body onload="init()">
+    <nav>   
+        <li><i class="fas fa-map-marker-alt"></i></li>
+        <li><a blank="_target" href="index.html">Home</a></li>
+        <li><a blank="_target" href="user-prefs.html">Preferences</a></li>
+    </nav>
+    <div class="map-container flex">
+        <div class="map-display">
+            <header class="map-header">Map</header>
+            <div id="map">
+            </div>
+        </div>
+        <section class="places-manager">
+            <div class="places-manager-title">Places Manager:</div>
+            <div class="places-container">
+                <div class="place-input">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/mapService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_5-vvF3V-SChc53r6ApcTUJHmhI_sZPM&callback=initMap&libraries=places" async defer></script>
+
+
+</body>
+</html>
